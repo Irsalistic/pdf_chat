@@ -59,7 +59,7 @@ class PdfReader():
             pdf_files (list): A list of PDF files to read. Each file should be a string path to the PDF file.
         """
         pdf_text = ""
-        for pdf_file in pdf_files:
+        for pdf_file in pdf_files or []:
             pdf_text += f"Contents of document {os.path.basename(pdf_file)} :\n"
             pdf_text += read_pdf(pdf_file) + "\n\n"
         if self.custom_system_prompt is None:

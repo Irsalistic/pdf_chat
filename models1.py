@@ -10,7 +10,7 @@ class OllamaChat:
 
         self._host = host
         self._model = model
-        self._ollama = Client(host)
+        self._ollama = Client(host=host)
 
     def ask(self, prompts: list, format: str = "text", temperature: float = 0.1):
         """
